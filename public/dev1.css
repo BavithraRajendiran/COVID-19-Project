@@ -1,0 +1,135 @@
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'popins' sans-serif;
+}
+
+/*---------------about-us section--------------*/
+
+#about-us
+{
+    background-size: cover;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.562), rgba(0,0,0,0.9)) ,url('images/kb3.jpg');
+    padding-bottom: 150px;
+    padding-top: 90px;
+    color:white;
+}
+#about-us h4
+{
+    color:white;
+    font-size: 40px;
+   
+}
+.about-title
+{
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 8%;
+}
+
+.about-title a
+{
+    color:tomato !important;
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 8%;
+}
+#about-us ul li
+{
+    margin: 10px 0;
+}
+
+#about-us ul
+{
+    margin-left: 20px;
+}
+.img-fluid{
+    position: relative;
+ height:70%;
+ width:70%;
+ 
+    top:10px !important;
+    left:100px !important;
+   
+
+}
+
+/*----------site-stats----------*/
+
+#site-stats
+{
+    background-color: rgba(5, 5, 5, 0.952);
+    padding: 100px 0;
+}
+#site-stats h3
+{
+    color:white;
+    margin-bottom: 30px;
+}
+.stats-box
+{
+    background-color: white;
+    color:rgb(29, 28, 28);
+    padding: 30px;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 2px 40px 0 rgba(110,130,208, .18);
+}
+.stats-box .fa
+{
+    font-size: 30px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.row{
+    color:white;
+}
+@media(max-width: 459px) {
+    .img-fluid{
+        position: relative;
+        height:90%;
+        width:90%;
+        
+           top:10px !important;
+           left:20px !important;
+    
+    }
+    #about-us
+{
+    background-size: 50%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.562), rgba(0,0,0,0.9)) ,url('images/kb3');
+    padding-bottom: 150px;
+    padding-top: 90px;
+    color:white;
+}
+    #about-us
+{
+    background-size: cover;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.562), rgba(0,0,0,0.9)) ,url('images/kb3.jpg');
+    padding-bottom: 150px;
+    padding-top: 90px;
+    color:white;
+}
+#about-us h4
+{
+    color:white;
+    font-size: 30px;
+   
+}
+.about-title
+{
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 8%;
+}
+
+.about-title a
+{
+    color:tomato !important;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 8%;
+}
+}

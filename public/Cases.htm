@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>Covid 19</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        
+            init()
+    
+    
+    
+            function init(){
+                var url = "https://api.covid19api.com/summary";
+    
+                var data = ''
+                
+                $.get(url,function(data){
+                    
+
+                    data = `
+
+                    <td>${data.Global.TotalConfirmed}</td>
+                    <td>${data.Global.TotalDeaths}</td>
+                    <td>${data.Global.TotalRecovered}</td>
+
+                    
+                    `
+                    $("#data").html(data)
+                })
+            }
+            function dataRefresh()
+            {
+                dataClear()
+            }
+            function dataClear()
+            {
+                $("#data").empty()
+                init()
+            }
+
+            
+        
+        function dataRefresh()
+            {
+                dataClear()
+            }
+            function dataClear()
+            {
+                $("#data").empty()
+                init()
+            }  
+    </script>
+    <style>
+   /* we use poppins font so we use this link*/
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+/*basic for all webpage for margins*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  z-index: 1000;
+  display: flex;
+  background:cover;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+
+
+header .logo {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  right:0px;
+
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center;
+  cursor: pointer;
+  /* top: 0;
+    left: 0;
+  cursor: pointer;
+  margin-left: 40px;
+  margin-top: 30px;
+  width: 120px;*/
+}
+
+
+
+/*this section class first page comes under this class*/
+.showcase {
+  position: relative;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(0, 0, 0);
+  color:white !important;
+}
+ 
+.at{
+    position: relative;
+    top:90px !important;
+    font-size: 20px !important;
+left:400px !important;
+
+ }
+
+.showcase h1{
+    position:relative;
+    left: -670px;
+}
+
+.showcase.active {
+  right: 300px;
+}
+
+.showcase video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+}
+
+/*showcase ends here*/
+/*this for we use one linear gradient above backgroung that's for*/
+
+.case1 h2{
+   position: relative;
+   font-size: 40px;
+    left:290px;
+    color:rgb(255, 255, 255) !important;
+}
+.table{
+    position: relative;
+    font-size: 40px;
+    left:200px;
+    color:rgb(255, 255, 255) !important;
+
+}
+th{
+    font-size:30px;
+}
+tr{
+  font-size:30px;
+}
+ button{
+    position: relative;
+    left:200px;
+}
+
+@media screen and (max-width: 450px){
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.at{
+    position: relative;
+    top:90px !important;
+    font-size: 15px !important;
+left:-75px !important;
+
+ }
+
+
+
+
+
+header .logo {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  right:90px;
+
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: center;
+  cursor: pointer;
+  /* top: 0;
+    left: 0;
+  cursor: pointer;
+  margin-left: 40px;
+  margin-top: 30px;
+  width: 120px;*/
+}
+
+
+
+/*this section class first page comes under this class*/
+.showcase {
+  position: relative;
+ 
+  width: 120%;
+
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(8, 8, 8);
+  color:white !important;
+ 
+ 
+}
+.showcase h1{
+    position:relative;
+    left: -70px;
+    font-size: 18px;
+}
+
+.showcase.active {
+  right: 300px;
+}
+
+.showcase video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.3;
+}
+
+/*showcase ends here*/
+/*this for we use one linear gradient above backgroung that's for*/
+
+.case1 h2{
+   position: relative;
+   font-size: 20px;
+   top:-10px;
+    left:-90px;
+    color:rgb(255, 255, 255) !important;
+}
+.table{
+    position: relative;
+    font-size: 1px;
+    top:-60px;
+   left:-90px;
+    color:rgb(255, 255, 255) !important;
+
+}
+th{
+    font-size:20px;
+  
+}
+tr{
+  font-size:20px;
+ 
+}
+ button{
+    position: relative;
+    left:100px;
+    top:-10px !important;
+}
+}
+    </style>
+ 
+</head>
+<body>
+
+        
+    <section class="showcase">
+        <header>
+          <img src="images/co.png" class="logo">
+          <div class="text1">
+       <h1>COVID GLOBAL CASES</h1>
+      
+          </div>
+          
+        </header>
+        
+ 
+    <div class="case1">
+        <h2 class="text-centre mt-5"> Covid 19 Live Cases in WORLD</h2>
+        <br>
+        <br>
+        <br>
+        
+        <table class="table">
+            <thead>
+              <tr>
+                <th>Total Cases &nbsp; &nbsp; &nbsp;&nbsp;</th>
+                <th>Total Deaths&nbsp; &nbsp; &nbsp;&nbsp;</th>
+                <th>Total Recoverd&nbsp; &nbsp; &nbsp;&nbsp;</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr id="data">
+                
+              </tr>
+             
+            </tbody>
+          </table>
+         
+
+          <h2 class="at">Data will be updated for every 24hrs</h2>
+    <video src="images/globe.mp4" muted loop autoplay></video>
+    <div class="overlay"></div>
+    </div>
+</body>
+
+
+
+</html>
